@@ -1,0 +1,170 @@
+body{
+  background-color: lightblue;
+  margin:auto 0;
+ display:flex;
+ flex-direction: column;
+ justify-content:center;
+ align-items: center;
+}
+.header {
+position:relative;
+top:100px;
+height: 20px;
+width:100vh;
+background-color:black;
+}
+.clockDial{
+  height:300px;
+  width:300px;
+  border:  solid #BBC2CC 15px;
+  border-radius:50%;
+  align-self:center;
+  top:250px;
+  background-image: linear-gradient(45deg,white, lightblue);
+  position: relative;
+
+ 
+ 
+  box-shadow:         inset 0 0 15px #000000;*/
+  
+}
+.clockDial .num{
+  position:absolute;
+  height:100%;
+  width:100%;
+  text-align:center;
+  color: black;/*#99FFFF*/
+  font-weight:bold;
+  font-size:25px;
+  
+  
+}
+#seconds-hand{
+  position:absolute;
+  background-color:red;
+  width:1px;
+  height:45%;
+  margin-left:50%;
+  margin-top:20px;
+  transform-origin:bottom ;
+}
+#minutes-hand{
+  position:absolute;
+  background-color: black;
+  width:3px;
+  height:45%;
+  margin-left:50%;
+  margin-top:20px;
+  transform-origin:bottom ;
+}
+#hours-hand{
+  position:absolute;
+  background-color:black;
+  width:6px;
+  height:41%;
+  margin-left:50%;
+  margin-top:10%;
+  transform-origin:bottom  ;
+}
+#inner-dot {
+   position: absolute;
+   background: darkblue;
+  border:solid 1px;
+  border-style:outset;
+   border-radius: 50%;
+   height: 5px;
+   width: 5px;
+   
+   margin-top: 50%;
+   margin-left: 49%;
+   
+   /* 
+    Offset the position correctly with
+    minus half of the width and minus half of the height 
+   */
+ }
+.num .num1{
+  transform:rotate(30deg);
+}
+.num .num2{
+  transform:rotate(60deg);
+}
+.num .num3{
+  transform:rotate(90deg);
+}
+.num .num4{
+  transform:rotate(120deg);
+}
+.num .num5{
+  transform:rotate(150deg);}
+.num .num6{
+  transform:rotate(180deg);        
+}
+
+.num .num7{
+  transform:rotate(210deg);
+}
+.num .num8{
+  transform:rotate(240deg);
+}
+.num .num9{
+  transform:rotate(270deg);
+}
+.num .num10{
+  transform:rotate(300deg);
+}
+.num .num11{
+  transform:rotate(330deg);
+}
+
+
+
+
+.num .num1 span{
+   
+  transform:rotate(-30deg);
+  }
+.num  .num2 span{
+   
+  transform:rotate(-60deg);
+}
+.num  .num3 span{
+   
+  transform:rotate(-90deg);
+}
+.num  .num4 span{
+   
+  transform:rotate(-120deg);
+}
+.num  .num5 span{
+   
+  transform:rotate(-150deg);
+}
+.num .num6 span{
+  
+  transform:rotate(-180deg);
+  
+}
+.num  .num7 span{
+   
+  transform:rotate(-210deg);
+}
+.num  .num8 span{
+   
+  transform:rotate(-240deg);
+}
+.num  .num9 span{
+   
+  transform:rotate(-270deg);
+}
+.num  .num10 span{
+   
+  transform:rotate(-300deg);
+}
+.num  .num11 span{
+   
+  transform:rotate(-330deg);
+}
+span{
+  display:inline-block;
+}
