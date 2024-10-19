@@ -1,21 +1,13 @@
 body{
   background-color: black;
-  margin:auto 0;
  display:flex;
- flex-direction: column;
  justify-content:center;
  align-items: center;
 }
-.header {
-position:relative;
-top:100px;
-height: 20px;
-width:100vh;
-background-color:black;
-}
+
 .clockDial{
-  height:300px;
-  width:300px;
+  height:90vmin;
+  width:90vmin;
   border:  solid #FF4500 15px;
   border-radius:50%;
   align-self:center;
@@ -181,4 +173,14 @@ background-color:black;
 }
 span{
   display:inline-block;
+}
+@media (max-width: 600px) {
+  .clockDial {
+      width: 70vmin;
+      height: 70vmin;
+  }
+
+  .clockDial .num {
+      font-size: 3vmin;
+  }
 }
