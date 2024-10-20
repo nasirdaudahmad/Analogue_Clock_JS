@@ -16,7 +16,7 @@ body {
     position: relative;
     width: 90vmin;
     height: 90vmin;
-    border: 10px solid #FF4500;
+    border: solid #FF4500 10px;
     border-radius: 50%;
     background-color: black;
 }
