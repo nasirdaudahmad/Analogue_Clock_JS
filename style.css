@@ -71,8 +71,8 @@ body {
 
 @media (max-width: 600px) {
     .clock {
-        width: 70vmin;
-        height: 70vmin;
+        width: 90vmin;
+        height: 90vmin;
     }
 
     .number {
