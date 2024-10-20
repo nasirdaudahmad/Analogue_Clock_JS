@@ -16,9 +16,9 @@ body {
     position: relative;
     width: 90vmin;
     height: 90vmin;
-    border: 10px solid #333;
+    border: 10px solid #FF4500;
     border-radius: 50%;
-    background-color: white;
+    background-color: black;
 }
 
 .hour-hand, .minute-hand, .second-hand {
@@ -32,14 +32,14 @@ body {
 .hour-hand {
     width: 6px;
     height: 25%;
-    background-color: #333;
+    background-color: #00FFFF;
     z-index: 1;
 }
 
 .minute-hand {
     width: 4px;
     height: 35%;
-    background-color: #666;
+    background-color: #00FFFF;
     z-index: 2;
 }
 
@@ -61,6 +61,7 @@ body {
 }
 
 .number {
+    color:#FF4500;
     position: absolute;
     transform-origin: center;
     font-size: 5vmin;
