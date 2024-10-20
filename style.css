@@ -1,186 +1,81 @@
-body{
-  background-color: black;
- display:flex;
- justify-content:center;
- align-items: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.clockDial{
-  height:90vmin;
-  width:90vmin;
-  border:  solid #FF4500 15px;
-  border-radius:50%;
-  align-self:center;
-  top:250px;
-  /*background-image: radial-gradient(red, black);*/
-  background-color:black;
-  position: relative;
-  outline: 5px solid rgba(255, 255, 255, 0.1);
- 
- 
-  box-shadow:         inset 0 0 15px #000000;*/
-  
-}
-.clockDial .num{
-  position:absolute;
-  height:100%;
-  width:100%;
-  text-align:center;
-  color: #FF4500;
-  font-weight:bold;
-  font-size:25px;
-  
-  
-}
-#seconds-hand{
-  position:absolute;
-  background-color:#FF4500;
-  width:1.5px;
-  height:45%;
-  margin-left:50%;
-  margin-top:20px;
-  transform-origin:bottom ;
-}
-#minutes-hand{
-  position:absolute;
-  background-color:#00FFFF;
-  width:3px;
-  height:45%;
-  margin-left:50%;
-  margin-top:20px;
-  transform-origin:bottom ;
-  box-shadow: 
-    0 0 10px #00FFFF,
-    0 0 20px #00FFFF,
-    0 0 30px #00FFFF,
-    0 0 40px #00FFFF,  
-    0 0 60px #00FFFF;
-
-}
-#hours-hand{
-  position:absolute;
-  background-color:#00FFFF;
-  width:6px;
-  height:41%;
-  margin-left:50%;
-  margin-top:10%;
-  transform-origin:bottom  ;
-  box-shadow: 
-    0 0 10px #00FFFF,
-    0 0 20px #00FFFF,
-    0 0 30px #00FFFF,
-    0 0 40px #00FFFF,  /* Slightly darker green for depth */
-    0 0 60px #00FFFF;
-}
-#inner-dot {
-   position: absolute;
-   background: darkred;
-  border:solid 1px;
-  border-style:outset;
-   border-radius: 50%;
-   height: 6px;
-   width: 6px;
-   
-   margin-top: 50%;
-   margin-left: 49%;
-   
-   /* 
-    Offset the position correctly with
-    minus half of the width and minus half of the height 
-   */
- }
-.num .num1{
-  transform:rotate(30deg);
-}
-.num .num2{
-  transform:rotate(60deg);
-}
-.num .num3{
-  transform:rotate(90deg);
-}
-.num .num4{
-  transform:rotate(120deg);
-}
-.num .num5{
-  transform:rotate(150deg);}
-.num .num6{
-  transform:rotate(180deg);        
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
-.num .num7{
-  transform:rotate(210deg);
+.clock {
+    position: relative;
+    width: 90vmin;
+    height: 90vmin;
+    border: 10px solid #333;
+    border-radius: 50%;
+    background-color: white;
 }
-.num .num8{
-  transform:rotate(240deg);
+
+.hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: rotate(90deg); /* Start position */
 }
-.num .num9{
-  transform:rotate(270deg);
+
+.hour-hand {
+    width: 6px;
+    height: 25%;
+    background-color: #333;
+    z-index: 1;
 }
-.num .num10{
-  transform:rotate(300deg);
+
+.minute-hand {
+    width: 4px;
+    height: 35%;
+    background-color: #666;
+    z-index: 2;
 }
-.num .num11{
-  transform:rotate(330deg);
+
+.second-hand {
+    width: 2px;
+    height: 40%;
+    background-color: red;
+    z-index: 3;
+}
+
+/* Number Styling */
+.numbers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    position: absolute;
+    transform-origin: center;
+    font-size: 2.5vmin;
+    transform: rotate(calc(30deg * var(--j))) translate(0, -40vmin) rotate(calc(-30deg * var(--j)));
 }
 
 
 
-
-.num .num1 span{
-   
-  transform:rotate(-30deg);
-  }
-.num  .num2 span{
-   
-  transform:rotate(-60deg);
-}
-.num  .num3 span{
-   
-  transform:rotate(-90deg);
-}
-.num  .num4 span{
-   
-  transform:rotate(-120deg);
-}
-.num  .num5 span{
-   
-  transform:rotate(-150deg);
-}
-.num .num6 span{
-  
-  transform:rotate(-180deg);
-  
-}
-.num  .num7 span{
-   
-  transform:rotate(-210deg);
-}
-.num  .num8 span{
-   
-  transform:rotate(-240deg);
-}
-.num  .num9 span{
-   
-  transform:rotate(-270deg);
-}
-.num  .num10 span{
-   
-  transform:rotate(-300deg);
-}
-.num  .num11 span{
-   
-  transform:rotate(-330deg);
-}
-span{
-  display:inline-block;
-}
 @media (max-width: 600px) {
-  .clockDial {
-      width: 70vmin;
-      height: 70vmin;
-  }
+    .clock {
+        width: 70vmin;
+        height: 70vmin;
+    }
 
-  .clockDial .num {
-      font-size: 3vmin;
-  }
+    .number {
+        font-size: 3vmin;
+    }
 }
